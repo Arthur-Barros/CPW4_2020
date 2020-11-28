@@ -1,5 +1,6 @@
 <template>
   <div v-if="todosContatos != 0" class="painelContatoSalvo" >
+    <div class="title">Lista de Contatos</div>
     <BlocoContato
       v-for="contato in todosContatos"
       v-bind:key="contato.id"
@@ -27,15 +28,22 @@ export default {
 <style>
 
 .painelContatoSalvo{
-    background-color: rgb(96, 96, 255);
+    background-color:white;
     border-radius: 5px;
     padding: 20px;
-    margin: 40px auto auto auto;
-    border: 2px solid var(--cor-destaque) ;
+    border: 2px solid white ;
+    position: relative;
+    left: 55%;
+    top: 40px;
+}
+
+.title{
+  font-size: 200%;
+  font-family: "negrito";
+  margin-bottom: 20px;
 }
 
 .mensagem{
-  
   font-family: "negrito";
   font-size: 140%;
   margin: auto;
@@ -43,18 +51,31 @@ export default {
   padding: 20px;
   border-radius:5px ;
   border-bottom: 2px solid var(--cor-destaque);
+  position: relative;
+  left: 25%;
+  top: 200px;
 }
 
 @media only screen and (max-width:600px){
   .painelContatoSalvo{
     padding: 10px;
-    
+    position: relative;
+    top: 450px;
+    left: auto;
+    margin-bottom: 10px;
   }
 
+  .title{
+    font-size: 150%;
+  }
   .mensagem{
     font-size: 120%;
     padding: 10px;
     text-align: center;
+    position: relative;
+    top: 450px;
+    left: auto;
+    margin-bottom: 10px;
   }
 }
 

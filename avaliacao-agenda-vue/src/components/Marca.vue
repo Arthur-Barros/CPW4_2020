@@ -1,6 +1,8 @@
 <template>
-  <div>
-      <img src="../img/LogoAgenda.png" alt="Logo Agenda">
+  <div class="marca">
+      <div class="contorno">
+          <img src="../img/LogoAgenda.png" alt="Logo Agenda">
+      </div>
       <span>Minha Agenda</span>
   </div>
 </template>
@@ -13,30 +15,44 @@ export default {
 
 <style scoped>
 
-    div {
-        background-color: white;
+    .marca{
         font-family: "negrito";
         padding: 40px;
-        border-bottom: 1px solid var(--cor-destaque);
+        border-bottom: 2px solid var(--cor-destaque);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white ;
+    }
+
+    .contorno{
+        background-color: white;
+        padding: 20px 25px;
+        border-radius: 50%;
+        box-shadow: 1px 1px gray;
     }
 
     img{
-        width: 60px;
+        width: 40px;    
         vertical-align: middle;
-        margin-right: 10px;
     }
 
     span{
-        color: var(--cor-destaque);
+        margin-left: 10px;
         font-size: 250%;
-        vertical-align: middle;
+        display: flex;
+        align-items: center;
     }
 
 
    @media only screen and (max-width:600px){
 
-       div{
+       .marca{
            padding: 20px;
+       }
+
+       .contorno{
+           padding: 15px 20px;
        }
 
        img{

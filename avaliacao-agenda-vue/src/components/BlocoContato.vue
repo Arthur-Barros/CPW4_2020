@@ -34,7 +34,7 @@ export default {
 <style>
 .blocoContato {
   display: flex;
-  background-color: white;
+  border: 2px solid var(--cor-destaque);
   border-radius: 20px;
   font-family: "padrao";
   padding: 10px;
@@ -55,9 +55,11 @@ export default {
 
 
 .descricaoContato{
-    margin-left:200px;
-    float: right;
-    text-align: right;
+  margin-left:200px;
+  float: right;
+  text-align: right;
+  width: 100%;
+    
 }
 .descricaoContato span{
     display: block;
@@ -116,9 +118,8 @@ export default {
   }
 
   .botaoRemover{
-    width: 20px;
-    height: 10px;
-    margin: 35px 0px 0px 0px;
+    width: 25px;
+    margin: 30px 0px 0px 0px;
   }
 
   .botaoRemover img {
